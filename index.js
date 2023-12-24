@@ -16,26 +16,38 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // JS para carrusel //
 document.addEventListener("DOMContentLoaded", function () {
-    const carousel = document.getElementById("imageCarousel");
-    const items = carousel.getElementsByClassName("carousel-item");
-    let currentSlide = 0;
-  
-    function showSlide(index) {
-      // Oculta todas las imágenes
+  function showSlide(carouselId, index) {
+      const carousel = document.getElementById(carouselId);
+      const items = carousel.getElementsByClassName("carousel-item");
       Array.from(items).forEach(item => item.style.display = "none");
-      // Muestra la imagen actual
       items[index].style.display = "block";
-    }
-  
-    function nextSlide() {
+  }
+
+  function nextSlide(carouselId, currentSlide) {
+      const carousel = document.getElementById(carouselId);
+      const items = carousel.getElementsByClassName("carousel-item");
       currentSlide = (currentSlide + 1) % items.length;
-      showSlide(currentSlide);
-    }
-  
-    // Inicia el carrusel
-    showSlide(currentSlide);
-  
-    // Cambia de imagen cada 4 segundos
-    setInterval(nextSlide, 4000);
-  });
+      showSlide(carouselId, currentSlide);
+      return currentSlide;
+  }
+
+  function startCarousel(carouselId) {
+      const items = document.getElementById(carouselId).getElementsByClassName("carousel-item");
+      let currentSlide = 0;
+      showSlide(carouselId, currentSlide);
+
+      setInterval(function () {
+          currentSlide = nextSlide(carouselId, currentSlide);
+      }, 4000);
+  }
+
+  startCarousel("imageCarousel");
+  startCarousel("imageCarousel2");
+  startCarousel("imageCarousel3");
+  startCarousel("imageCarousel4");
+  startCarousel("imageCarousel5");
+  startCarousel("imageCarousel6");
+  // Repite el mismo patrón para los demás carruseles cambiando los identificadores
+});
+
   

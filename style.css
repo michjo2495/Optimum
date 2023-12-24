@@ -79,8 +79,9 @@ header {
 }
 
 .carousel {
-  width: 300px; /* Ajusta el ancho del carrusel según tus necesidades */
+  width: 200px;
   overflow: hidden;
+  margin-top: -310px;
 }
 
 .carousel-item {
@@ -89,10 +90,11 @@ header {
 }
 
 .description-container {
-  margin-left: 20px; /* Ajusta el espacio entre el carrusel y la descripción según tus necesidades */
+  margin-top: -260px;
+  margin-left: 20px;
 }
 
-.pau1 {
+.optm1 {
   line-height: 1.5;
   font-size: 20px;
   color: white;
@@ -100,15 +102,11 @@ header {
   font-family: Arial, Helvetica, sans-serif;
   line-height: normal;
   max-width: 1000px;
-  /* Establece el ancho máximo de la descripción */
   margin: 0 auto;
-  /* Centra la descripción horizontalmente */
   padding: 20px;
-  /* Añade un relleno alrededor de la descripción */
   border: 3px solid #000000;
-  /* Añade un borde */
   border-radius: 10px;
-  /* Agrega esquinas redondeadas */
+  margin-top: -20px;
 }
 
 @keyframes gradient {
