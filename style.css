@@ -1,0 +1,169 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f8f8;
+}
+
+header {
+  background-color: #080202;
+  color: #fff;
+  padding: 15px 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: -50px;
+}
+
+.logo img {
+  max-width: 100px;
+  /* Ajusta el tamaño del logo según tus necesidades */
+  margin-right: 15px;
+  /* Espaciado entre el logo y el título */
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 24px;
+  display: inline-block;
+  background: linear-gradient(45deg, #ff7e5f, #feb47b, #ffd700, #8ae65c, #4acccf, #2998ff, #3c66c9, #7333a8);
+  background-size: 200% 200%;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: gradient 5s linear infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffd700;
+}
+
+/* Estilos para pantallas grandes (laptop, computadora) */
+@media screen and (min-width: 768px) {
+  #menu-toggle {
+      display: none; /* Oculta el botón de alternar el menú en pantallas más grandes */
+  }
+
+  nav ul {
+      display: flex !important; /* Asegura que la lista de navegación esté visible en pantallas más grandes */
+  }
+}
+
+/* Estilos para pantallas pequeñas (celular) */
+@media screen and (max-width: 767px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    /* Ajusta para posicionar la lista en el lado derecho */
+    width: 100%;
+    max-width: 200px;
+    background-color: #000000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 10px 10px;
+    z-index: 1;
+  }
+
+  nav li {
+    margin: 0;
+    text-align: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #fff;
+  }
+
+  nav li:last-child {
+    border-bottom: none;
+  }
+
+  nav a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+
+  nav a:hover {
+    color: #ffd700;
+  }
+
+  /* Ajusta el botón para mostrar/ocultar el menú */
+  #menu-toggle {
+    display: block;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    color: #fff;
+    /* Color del botón (blanco) */
+    background-color: #000;
+    /* Color de fondo del botón (negro) */
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 2;
+    padding: 10px;
+    /* Añade un poco de espacio alrededor del botón */
+    border: none;
+    /* Elimina el borde del botón */
+    border-radius: 5px;
+    /* Agrega esquinas redondeadas al botón */
+  }
+
+  #menu-toggle:hover {
+    background-color: #222;
+    /* Cambia el color de fondo al pasar el ratón sobre el botón */
+  }
+
+  /* Ajusta el espacio a la derecha del contenedor principal para dejar espacio para el logo */
+  .container {
+    padding-right: 60px;
+    /* Puedes ajustar este valor según sea necesario */
+  }
+
+  /* Estilos para el logo en el menú desplegable */
+  .logo img {
+    max-width: 150px;
+    margin-bottom: 10px;
+  }
+}
