@@ -2,13 +2,15 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Arial', sans-serif;
-  background-color: #f8f8f8;
+  background-color: #ff0303;
 }
 
 header {
   background-color: #080202;
   color: #fff;
   padding: 15px 0;
+  width: 100%;
+  margin: 0;
 }
 
 .logo {
@@ -20,28 +22,93 @@ header {
 .logo img {
   max-width: 100px;
   /* Ajusta el tamaño del logo según tus necesidades */
-  margin-right: 15px;
+  margin-right: 0px;
   /* Espaciado entre el logo y el título */
 }
 
-.container {
-  width: 80%;
+.container-1 {
+  width: 90%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-h1 {
+.descripcion {
   margin: 0;
-  font-size: 24px;
-  display: inline-block;
-  background: linear-gradient(45deg, #ff7e5f, #feb47b, #ffd700, #8ae65c, #4acccf, #2998ff, #3c66c9, #7333a8);
-  background-size: 200% 200%;
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  animation: gradient 5s linear infinite;
+  font-size: 40px;
+  color: #000000;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  line-height: .5;
+}
+
+.p {
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: normal;
+  max-width: 1000px;
+  /* Establece el ancho máximo de la descripción */
+  margin: 0 auto;
+  /* Centra la descripción horizontalmente */
+  padding: 20px;
+  /* Añade un relleno alrededor de la descripción */
+  border: 3px solid #000000;
+  /* Añade un borde */
+  border-radius: 10px;
+  /* Agrega esquinas redondeadas */
+}
+.int {
+  margin: 50px;
+  font-size: 30px;
+  color: #000000;
+  font-family: 'Arial', sans-serif;
+  line-height: .5;
+}
+.container-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.carousel-container {
+  display: flex;
+}
+
+.carousel {
+  width: 300px; /* Ajusta el ancho del carrusel según tus necesidades */
+  overflow: hidden;
+}
+
+.carousel-item {
+  width: 100%;
+  display: none;
+}
+
+.description-container {
+  margin-left: 20px; /* Ajusta el espacio entre el carrusel y la descripción según tus necesidades */
+}
+
+.pau1 {
+  line-height: 1.5;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: normal;
+  max-width: 1000px;
+  /* Establece el ancho máximo de la descripción */
+  margin: 0 auto;
+  /* Centra la descripción horizontalmente */
+  padding: 20px;
+  /* Añade un relleno alrededor de la descripción */
+  border: 3px solid #000000;
+  /* Añade un borde */
+  border-radius: 10px;
+  /* Agrega esquinas redondeadas */
 }
 
 @keyframes gradient {
@@ -80,11 +147,13 @@ nav a:hover {
 /* Estilos para pantallas grandes (laptop, computadora) */
 @media screen and (min-width: 768px) {
   #menu-toggle {
-      display: none; /* Oculta el botón de alternar el menú en pantallas más grandes */
+    display: none;
+    /* Oculta el botón de alternar el menú en pantallas más grandes */
   }
 
   nav ul {
-      display: flex !important; /* Asegura que la lista de navegación esté visible en pantallas más grandes */
+    display: flex !important;
+    /* Asegura que la lista de navegación esté visible en pantallas más grandes */
   }
 }
 
@@ -165,5 +234,31 @@ nav a:hover {
   .logo img {
     max-width: 150px;
     margin-bottom: 10px;
+  }
+
+  .descripcion {
+    margin: 0;
+    font-size: 25px;
+    color: #000000;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    line-height: .8;
+  }
+  .p {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: normal;
+    max-width: 300px;
+    /* Establece el ancho máximo de la descripción */
+    margin: 0 auto;
+    /* Centra la descripción horizontalmente */
+    padding: 20px;
+    /* Añade un relleno alrededor de la descripción */
+    border: 1px solid #000000;
+    /* Añade un borde */
+    border-radius: 10px;
+    /* Agrega esquinas redondeadas */
   }
 }

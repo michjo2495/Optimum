@@ -14,3 +14,28 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+// JS para carrusel //
+document.addEventListener("DOMContentLoaded", function () {
+    const carousel = document.getElementById("imageCarousel");
+    const items = carousel.getElementsByClassName("carousel-item");
+    let currentSlide = 0;
+  
+    function showSlide(index) {
+      // Oculta todas las imágenes
+      Array.from(items).forEach(item => item.style.display = "none");
+      // Muestra la imagen actual
+      items[index].style.display = "block";
+    }
+  
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % items.length;
+      showSlide(currentSlide);
+    }
+  
+    // Inicia el carrusel
+    showSlide(currentSlide);
+  
+    // Cambia de imagen cada 4 segundos
+    setInterval(nextSlide, 4000);
+  });
+  
