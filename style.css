@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Arial', sans-serif;
-  background-color: #ff0303;
+  background-color: #000000;
 }
 
 header {
@@ -37,15 +37,16 @@ header {
 .descripcion {
   margin: 0;
   font-size: 40px;
-  color: #000000;
+  color: #ff0303;
   text-align: center;
-  font-family: 'Arial', sans-serif;
   line-height: .5;
+  font-family: 'Roboto', sans-serif; /* Cambia la fuente a Roboto */
+  text-shadow: 2px 2px 4px rgba(112, 191, 255, 0.651); /* Agrega una sombra al texto del título */
 }
 
 .p {
   font-size: 20px;
-  color: white;
+  color: rgb(0, 0, 0);
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   line-height: normal;
@@ -59,7 +60,9 @@ header {
   /* Añade un borde */
   border-radius: 10px;
   /* Agrega esquinas redondeadas */
+  background-color: #ca8f22;
 }
+
 .int {
   margin: 50px;
   font-size: 30px;
@@ -67,11 +70,13 @@ header {
   font-family: 'Arial', sans-serif;
   line-height: .5;
 }
+
 .container-2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 60vh;
+  margin-top: 90px;
 }
 
 .carousel-container {
@@ -80,8 +85,12 @@ header {
 
 .carousel {
   width: 200px;
+  margin-right: 15px;
   overflow: hidden;
   margin-top: -310px;
+  border-radius: 10px;
+  border: 2px solid #000000;
+  box-shadow: 0 0 0 5px #4475b2, 0 0 20px 20px #4883bf;
 }
 
 .carousel-item {
@@ -94,20 +103,84 @@ header {
   margin-left: 20px;
 }
 
+.optm {
+  color: white;
+  margin-bottom: 70px;
+}
+
 .optm1 {
+  background-color: #4475b2;
   line-height: 1.5;
   font-size: 20px;
-  color: white;
+  color: rgb(0, 0, 0);
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
-  line-height: normal;
   max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
-  border: 3px solid #000000;
-  border-radius: 10px;
   margin-top: -20px;
+  border: 3px solid transparent;
+  border-radius: 20px;
+  position: relative;
+  /* Agrega el borde con efecto de nube y ondas */
+  box-shadow: 0 0 0 10px #4475b2, 0 0 0 10px #000000, 0 0 20px 20px #4475b2;
 }
+
+.optm1 a {
+  text-decoration: none; /* Elimina la decoración del enlace */
+}
+/* Estilos generales según tu preferencia */
+
+.container-3 {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  margin-top: -200px;
+}
+
+.carousel-container1 {
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 0 0 10px #4475b2, 0 0 0 10px #000000, 0 0 20px 20px #4475b2;
+}
+
+.carousel-item1 {
+  width: 100%;
+  display: none;
+}
+
+.carousel-item1.active {
+  display: block;
+}
+
+.slick-prev,
+.slick-next {
+  font-size: 24px;
+  color: #ffffff;
+  z-index: 1;
+  top: 40%; /* Ajusta este valor para cambiar la posición vertical */
+  cursor: pointer;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  color: #555;
+}
+
+.slick-prev::before,
+.slick-next::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+
+.slick-prev::before {
+  content: "\f053"; /* Ícono de flecha izquierda */
+}
+
+.slick-next::before {
+  content: "\f054"; /* Ícono de flecha derecha */
+}
+
 
 @keyframes gradient {
   0% {
@@ -242,6 +315,7 @@ nav a:hover {
     font-family: 'Arial', sans-serif;
     line-height: .8;
   }
+
   .p {
     font-size: 20px;
     color: white;
@@ -258,5 +332,38 @@ nav a:hover {
     /* Añade un borde */
     border-radius: 10px;
     /* Agrega esquinas redondeadas */
+  }
+  .carousel {
+    width: 200px;
+    overflow: hidden;
+    margin-top: -310px;
+    border-radius: 10px;
+    border: 5px solid #000000;
+  }
+  .optm1 {
+    background-color: #4475b2;
+    line-height: 1.5;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: -20px;
+    border: 3px solid transparent;
+    border-radius: 20px;
+    position: relative;
+  
+    /* Agrega el borde con efecto de nube y ondas */
+    box-shadow: 0 0 0 15px #4475b2, 0 0 0 20px #000000, 0 0 20px 20px #4475b2;
+  }
+  .container-2 {
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    height: 60vh;
+    margin-top: 90px;
   }
 }

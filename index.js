@@ -50,4 +50,30 @@ document.addEventListener("DOMContentLoaded", function () {
   // Repite el mismo patrón para los demás carruseles cambiando los identificadores
 });
 
+// Carusel de imagenes grupales //
+
+$(document).ready(function () {
+    $('#imageCarousel7').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: true,
+      arrows: true,
+      prevArrow: '<button type="button" class="slick-prev">&#8249;</button>',
+      nextArrow: '<button type="button" class="slick-next">&#8250;</button>',
+      infinite: true,
+      speed: 500,
+      fade: true,
+      cssEase: 'linear'
+    });
+  
+    // Agrega el siguiente código para habilitar el control con las flechas del teclado
+    $(document).on('keydown', function (e) {
+      if (e.key === 'ArrowLeft') {
+        $('#imageCarousel7').slick('slickPrev');
+      } else if (e.key === 'ArrowRight') {
+        $('#imageCarousel7').slick('slickNext');
+      }
+    });
+  });
+  
   
